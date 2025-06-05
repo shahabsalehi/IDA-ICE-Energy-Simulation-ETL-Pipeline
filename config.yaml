@@ -1,0 +1,63 @@
+# IDA ICE ETL Pipeline Configuration
+
+# Data paths
+paths:
+  raw_simulations: "data/raw/simulations"
+  processed_parquet: "data/processed/parquet"
+  processed_duckdb: "data/processed/duckdb/simulations.duckdb"
+
+# Synthetic data generation settings
+synthetic_data:
+  buildings:
+    - "BLDG_01"
+    - "BLDG_02"
+    - "BLDG_03"
+  scenarios:
+    - "BASE"
+    - "RETROFIT"
+  start_date: "2024-01-01 00:00"
+  duration_days: 7
+  time_resolution: "hourly"  # NOTE: This value is for documentation only; time resolution is hardcoded to hourly in the code
+  num_zones_per_building: 5
+  num_ahu_per_building: 2
+
+# Validation settings
+validation:
+  enabled: true
+  checks:
+    schema: true
+    value_ranges: true
+    temporal_coverage: true
+    energy_plausibility: true
+  
+  # Value range limits
+  ranges:
+    air_temp_C:
+      min: 10
+      max: 35
+    co2_ppm:
+      min: 400
+      max: 2500
+    rh_pct:
+      min: 0
+      max: 100
+    drybulb_C:
+      min: -30
+      max: 40
+    ghi_W_m2:
+      min: 0
+      max: 1500
+
+# Database settings
+database:
+  create_views: true
+  views:
+    - vw_zone_with_weather
+    - vw_hvac_with_meters
+    - vw_energy_summary
+
+# Pipeline settings
+pipeline:
+  fail_on_validation_error: false
+  verbose: true
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR

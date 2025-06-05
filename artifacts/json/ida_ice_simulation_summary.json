@@ -1,0 +1,101 @@
+{
+  "pipeline": "ida_ice_energy_simulation",
+  "generated_at": "2025-11-28T10:43:19.726099+00:00",
+  "scenario": {
+    "name": "Baseline Energy Analysis",
+    "building_type": "Office Complex",
+    "location": "Tallinn, Estonia",
+    "floor_area_m2": 2170,
+    "simulation_period": "2024-01-01 to 2024-12-31"
+  },
+  "annual": {
+    "total_kwh": 185000,
+    "heating_kwh": 92000,
+    "cooling_kwh": 18500,
+    "lighting_kwh": 32400,
+    "equipment_kwh": 42100
+  },
+  "monthly_breakdown": [
+    {
+      "month": "Jan",
+      "heating_kwh": 16500,
+      "cooling_kwh": 0,
+      "total_kwh": 22300
+    },
+    {
+      "month": "Feb",
+      "heating_kwh": 14200,
+      "cooling_kwh": 0,
+      "total_kwh": 20100
+    },
+    {
+      "month": "Mar",
+      "heating_kwh": 11800,
+      "cooling_kwh": 200,
+      "total_kwh": 17900
+    },
+    {
+      "month": "Apr",
+      "heating_kwh": 8200,
+      "cooling_kwh": 800,
+      "total_kwh": 14800
+    },
+    {
+      "month": "May",
+      "heating_kwh": 4500,
+      "cooling_kwh": 1800,
+      "total_kwh": 12100
+    },
+    {
+      "month": "Jun",
+      "heating_kwh": 2100,
+      "cooling_kwh": 3200,
+      "total_kwh": 10900
+    },
+    {
+      "month": "Jul",
+      "heating_kwh": 1200,
+      "cooling_kwh": 4100,
+      "total_kwh": 10800
+    },
+    {
+      "month": "Aug",
+      "heating_kwh": 1800,
+      "cooling_kwh": 3600,
+      "total_kwh": 11200
+    },
+    {
+      "month": "Sep",
+      "heating_kwh": 5200,
+      "cooling_kwh": 2300,
+      "total_kwh": 13300
+    },
+    {
+      "month": "Oct",
+      "heating_kwh": 9400,
+      "cooling_kwh": 1200,
+      "total_kwh": 16400
+    },
+    {
+      "month": "Nov",
+      "heating_kwh": 13100,
+      "cooling_kwh": 300,
+      "total_kwh": 19200
+    },
+    {
+      "month": "Dec",
+      "heating_kwh": 14000,
+      "cooling_kwh": 0,
+      "total_kwh": 20000
+    }
+  ],
+  "kpis": {
+    "energy_intensity_kwh_m2": 85.2,
+    "heating_intensity_kwh_m2": 42.4,
+    "cooling_intensity_kwh_m2": 8.5,
+    "annual_co2_tons": 42.3,
+    "co2_intensity_kg_m2": 19.5,
+    "peak_demand_kw": 156.8,
+    "comfort_hours_percent": 94.2
+  }
+}
